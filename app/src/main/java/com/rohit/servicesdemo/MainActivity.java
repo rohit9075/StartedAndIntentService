@@ -49,11 +49,11 @@ public class MainActivity extends AppCompatActivity {
 
 	public void startIntentService(View view) {
 
-		ResultReceiver myResultReceiver = new MyResultReceiver(null);
+//		ResultReceiver myResultReceiver = new MyResultReceiver(null);
 
 		Intent intent = new Intent(this, MyIntentService.class);
 		intent.putExtra("sleepTime", 10);
-		intent.putExtra("receiver", myResultReceiver);
+//		intent.putExtra("receiver", myResultReceiver);
 		startService(intent);
 	}
 

@@ -10,7 +10,7 @@ import android.util.Log;
 // Intent Service Demo
 public class MyIntentService extends IntentService {
 
-	private static final String TAG = MyIntentService.class.getSimpleName();
+	private static final String TAG = "IntentService";
 
 	public MyIntentService() {
 		super("MyWorkerThread"); // Give the name to the worker thread
@@ -28,7 +28,7 @@ public class MyIntentService extends IntentService {
 
 		int sleepTime = intent.getIntExtra("sleepTime", 1);
 
-		ResultReceiver resultReceiver = intent.getParcelableExtra("receiver");
+//		ResultReceiver resultReceiver = intent.getParcelableExtra("receiver");
 
 		int ctr = 1;
 
@@ -44,9 +44,9 @@ public class MyIntentService extends IntentService {
 			ctr++;
 		}
 
-		Bundle bundle = new Bundle();
-		bundle.putString("resultIntentService", "Counter stopped at " + ctr + " seconds");
-		resultReceiver.send(18, bundle);
+//		Bundle bundle = new Bundle();
+//		bundle.putString("resultIntentService", "Counter stopped at " + ctr + " seconds");
+//		resultReceiver.send(18, bundle);
 	}
 
 	@Override
